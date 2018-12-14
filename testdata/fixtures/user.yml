@@ -1,0 +1,11 @@
+table: user
+version: "1.0"
+rows:
+- id: "1"
+  nickname: "Kary"
+  phone_no: "+8619393992882"
+  address: "Beijing, China"
+- id: "2"
+  nickname: "Jack"
+  phone_no: "+8619303992122"
+  address: "Shanghai, China"
