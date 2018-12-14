@@ -2,9 +2,8 @@ package fixture
 
 import (
 	"path"
-	"testing"
-
 	"runtime"
+	"testing"
 
 	"github.com/stretchr/testify/assert"
 )

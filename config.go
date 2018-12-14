@@ -2,10 +2,8 @@ package fixture
 
 import (
 	"fmt"
-
-	"strings"
-
 	"log"
+	"strings"
 )
 
 type Config struct {

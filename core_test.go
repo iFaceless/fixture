@@ -1,13 +1,11 @@
 package fixture
 
 import (
+	"database/sql"
 	"fmt"
 	"os"
-	"testing"
-
 	"path"
-
-	"database/sql"
+	"testing"
 
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/stretchr/testify/assert"

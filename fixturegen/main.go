@@ -1,20 +1,17 @@
 package main
 
 import (
+	"database/sql"
 	"flag"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"path"
-
 	"strings"
 
 	"github.com/go-errors/errors"
-	"github.com/iFaceless/fixture"
-
-	"database/sql"
-
 	_ "github.com/go-sql-driver/mysql"
+	"github.com/iFaceless/fixture"
 )
 
 var (

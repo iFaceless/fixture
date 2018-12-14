@@ -1,14 +1,11 @@
 package fixture
 
 import (
-	"path"
-
-	"strings"
-
-	"fmt"
-
 	"database/sql"
+	"fmt"
 	"log"
+	"path"
+	"strings"
 )
 
 const (
