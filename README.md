@@ -1,3 +1,9 @@
+FIXTURE: Easily Load or Export Test Fixtures
+=============================================
+
+[![Build Status](https://travis-ci.com/iFaceless/fixture.svg?branch=master)](https://travis-ci.com/iFaceless/fixture)
+[![Coverage Status](https://coveralls.io/repos/github/iFaceless/fixture/badge.svg?branch=master)](https://coveralls.io/github/iFaceless/fixture?branch=master)
+
 ```
   __ _      _
  / _(_)_  _| |_ _   _ _ __ ___
