@@ -14,6 +14,7 @@ before_install:
   - mysql -e 'CREATE DATABASE test_fixture;'
 
 script:
+  - dep init
   - dep ensure -v
   - go test -v ./... -covermode=count -coverprofile=coverage.out
   - goveralls -coverprofile=coverage.out -service=travis-ci
