@@ -2,6 +2,10 @@ language: go
 
 go:
   - master
+  - 1.8.x
+  - 1.9.x
+  - 1.10.x
+  - 1.11.x
 
 services:
   - mysql
@@ -16,5 +20,5 @@ before_install:
 script:
   - dep init
   - dep ensure -v
-  - go test -v ./... -covermode=count -coverprofile=coverage.out
+  - go test -v -covermode=atomic -coverprofile=coverage.out -race
   - goveralls -coverprofile=coverage.out -service=travis-ci
