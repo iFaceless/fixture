@@ -3,6 +3,7 @@ FIXTURE: Easily Load or Export Test Fixtures
 
 [![Build Status](https://travis-ci.com/iFaceless/fixture.svg?branch=master)](https://travis-ci.com/iFaceless/fixture)
 [![Coverage Status](https://coveralls.io/repos/github/iFaceless/fixture/badge.svg?branch=master)](https://coveralls.io/github/iFaceless/fixture?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/iFaceless/fixture)](https://goreportcard.com/report/github.com/iFaceless/fixture)
 
 ```
   __ _      _
