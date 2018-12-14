@@ -10,7 +10,7 @@
 
 我们在 Python 项目中写单元测试时，一般需要准备测试数据并在启动单元测试时使用 `@fixture('foo.sql')` 的方式导入到数据库。
 
-让我们回顾下，使用 SQL 格式的 fixture 数据存在什么问题：
+让我们回顾下，使用 SQL 格式的测试数据存在什么问题：
 1. 造测试数据非常麻烦，如果某个表的字段较多时，更为严重，可能存在某些字段填的值没和期望的列名对应上；
 2. 纯 SQL 虽然可以方便地从数据库直接复制导入，但是后期编辑和维护比较麻烦。
 
@@ -20,9 +20,9 @@
 
 **注意**：*目前仅支持 MySQL 或者符合 MySQL 协议的数据库*
 
-- **优雅的接口**：方便在测试代码中使用 fixture 数据
+- **优雅的接口**：方便在测试代码中使用测试数据
 - **支持 JSON/YAML/SQL 格式测试数据导入数据库**
-- **支持从数据库指定表中生成 fixture 数据（支持 JSON/YAML/SQL 格式导出）**
+- **支持从数据库指定表中生成测试数据（支持 JSON/YAML/SQL 格式导出）**
 - **格式可扩展**：除了默认支持的 `JSON/YAML/SQL` 格式外，也支持自定义格式，只需要实现相关接口即可（直接提 PR）
 
 
@@ -58,7 +58,7 @@ configs
 └── fixture.go
 ```
 
-在 `fixture.go` 中添加下面的代码，方便 fixture 启动时知道去哪儿读取 schema 和测试数据配置：
+在 `fixture.go` 中添加下面的代码，方便 [fixture](github.com/iFaceless/fixture/fixturegen) 启动时知道去哪儿读取 schema 和测试数据配置：
 
 ```golang
 func NewDefaultTestFixture() *fixture.TestFixture {
@@ -123,7 +123,7 @@ func (s *SuiteExampleTester) TestBar() {
 
 # 导出
 
-啊，我不想一开始就手写 YAML/JSON/SQL！我希望能利用测试环境中的数据，然后再在输出结果的基础上修改为想要的测试数据！没问题，`fixture` 目前已经支持导出数据为这三种格式啦！
+啊，我不想一开始就手写 YAML/JSON/SQL！我希望能利用测试环境中的数据，然后再在输出结果的基础上修改为想要的测试数据！没问题，[fixture](github.com/iFaceless/fixture/fixturegen) 目前已经支持导出数据为这三种格式啦！
 
 ## 安装
 
@@ -185,7 +185,7 @@ $ fixturegen -url mysql://localhost:3306/test_todo_api -t user -q "SELECT * FROM
 
 - `TestFixture.New`: 新建 `TestFixture` 实例，需要用户提供数据库、测试数据配置
 - `TestFixture.Use`: 使用指定表的测试数据填充到测试数据库对应表中
-- `TestFixture.DropTables`: 用于测试结束后删除测试表（注意，`fixture` 工具不会随意自动删除表，所以作为用户的你需要显式调用才会删除表）
+- `TestFixture.DropTables`: 用于测试结束后删除测试表（注意，[fixture](github.com/iFaceless/fixture/fixturegen) 工具不会随意自动删除表，所以作为用户的你需要显式调用才会删除表）
 - `TestFixture.TableNames`: 通过 `schema.sql` 读取到的所有表名
 - `TestFixture.Config`: 可以获取详细配置信息
 - `Scope.Clear`: 用于某个单元测试结束后，清空表数据
