@@ -192,14 +192,6 @@ $ fixturegen -url mysql://localhost:3306/test_todo_api -t user -o path/to/testda
 $ fixturegen -url mysql://localhost:3306/test_todo_api -t user -q "SELECT * FROM user WHERE id > 100 LIMIT 10"
 ```
 
-生成文件示例：
-
-![YAML 文件](https://upload-images.jianshu.io/upload_images/2185073-ace42bbc49536901.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![JSON 文件](https://upload-images.jianshu.io/upload_images/2185073-2f22bd73296e4371.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-![SQL 文件](https://upload-images.jianshu.io/upload_images/2185073-f39c2b254ba44540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 # 主要 API 说明
 
 - `TestFixture.New`: 新建 `TestFixture` 实例，需要用户提供数据库、测试数据配置
