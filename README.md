@@ -175,11 +175,11 @@ $ fixturegen -url mysql://localhost:3306/test_todo_api -t user -q "SELECT * FROM
 
 生成文件示例：
 
-![YAML 文件](http://pho2na29z.bkt.clouddn.com/2018-12-14-21-05-11.png)
+![YAML 文件](https://upload-images.jianshu.io/upload_images/2185073-ace42bbc49536901.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![JSON 文件](http://pho2na29z.bkt.clouddn.com/2018-12-14-21-05-28.png)
+![JSON 文件](https://upload-images.jianshu.io/upload_images/2185073-2f22bd73296e4371.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![SQL 文件](http://pho2na29z.bkt.clouddn.com/2018-12-14-21-05-59.png)
+![SQL 文件](https://upload-images.jianshu.io/upload_images/2185073-f39c2b254ba44540.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 # 主要 API 说明
 
